@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{% block content%}
+<div id="container">
+    
+  <h1>TopFreeSkill</h1>
+  <img id="banner" src="/static/banner.jpg" alt="banner">
+  <h2>About Us</h2>
+  <p class="bodytext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sapiente ipsam autem omnis atque sequi laboriosam quaerat veritatis. Accusantium a cumque natus doloremque! Soluta, eveniet porro consectetur voluptatem nam eligendi laboriosam aliquam tempora. Accusantium eaque minima optio dolorum pariatur enim vitae vel provident? Eos voluptates officia recusandae quaerat. Praesentium unde incidunt ipsum eius, eos reiciendis facere ut dolores iste similique voluptates dignissimos vitae quidem totam dolorem voluptatum minima quis tenetur repudiandae. Pariatur tempore magni accusamus, repellat deleniti aut officia repellendus non blanditiis voluptatum quos quod dolor nulla quasi, corporis unde! Doloribus voluptas ducimus eaque praesentium. Voluptate animi ullam quasi totam recusandae blanditiis nesciunt magnam necessitatibus nulla tempore fuga, consequuntur illum explicabo quod nisi voluptates illo deleniti ad architecto quo quia eligendi. Molestiae, atque pariatur corporis rem, ratione, nostrum harum deleniti numquam cum delectus accusamus quos aliquam. Cum quae animi eos nemo. Ex dicta est minima voluptatibus accusantium odio repellendus eum quibusdam dolorum tempore eligendi unde obcaecati incidunt voluptate molestias, blanditiis a, praesentium aliquid quam sequi optio ipsa id non? Tenetur veniam est, quae consequatur minus totam quibusdam fuga nisi sed dignissimos enim dolor modi quidem iusto tempora eveniet doloremque illum reiciendis ullam, quia.</p>
+  <h2>Job Openings</h2>
+  <p class="bodytext">
+    
+
+    <div class="row">
+      <div class=column9>
+        
+        {% for job in jobs%}
+        <div>{{job['title']}}</div>
+        
+        {%if 'salary'in job%}
+        <div>{{job['salary']}}</div>
+        {%endif%}
+        <div>{{job['location']}}</div>
+    <button class="column3" type="button">Apply</button>
+        <hr>
+        
+        {%endfor%}
+    
+      
+  
+      </div>
+    </p>
+      </div>
+    <div id="button" class=column 3>
+    <button>Contact Us</button>
+      </div>
+{%endblock%}
